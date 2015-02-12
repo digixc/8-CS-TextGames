@@ -104,59 +104,45 @@
 - Because of this, some of the earliest games ever made were purely text-based games, that only used ASCII characters.
 [[file:https://upload.wikimedia.org/wikipedia/en/1/17/Rogue_Screen_Shot_CAR.PNG]]
 - To this day, many programmers still like to create text-based games. This is especially useful when trying out a knew language, as it let's the programmer play around with the logic of a programming language, without having to worry about the complicated world of rendering graphics.
-** Code It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: code
-:END:
-
-** Research It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: research
-:END:
-- One of the most famous of the text-based games was called Rogue.
-- Modern games such as Diabolo II are based on Rogue, and creating Rogue-like games is still a challange that many programmers enjoy when trying out a language.
-- [[http://jsrogue.com/game][Have a look at this JavaScript implementation of Rogue]], to get a feel for what the game is like.
-** Badge It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
-:END:
-** Design It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: design
-:END:
-
-** Build It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: build
-:END:
-
-** Test It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: test
-:END:
-
-** Run It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: run
-:END:
-
-** Document It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: document
-:END:
-
-** Program It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: program
-:END:
-
 ** Try It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: try
 :END:
-
-** Save It
+** Badge It - Silver
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: save
+:HTML_CONTAINER_CLASS: badge
 :END:
-
+- Imagine you were tasked with creating a computer game, but you could only display ASCII characters on the screen and only take ASCII characters as input.
+- Look at this link [[https://http://en.wikipedia.org/wiki/ASCII#ASCII_printable_code_chart][ASCII LIST]]
+- Create a list of three types of games that you could create and a short description for each one. By the end of this module, you might even be capable of creating one.
+** Test It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: test
+:END:
+- [[file:doc/rogueClone.py][Download this file]] to your home folder.
+- Double click it to open it up.
+- This is a very simple (rogue-like) game that you can play. Use the W,A,S,D keys to control your movement (hitting return each time)
+- You can move about the cave, kill monsters (A-G) and heal at shrines (?)
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+- Now open up the file in IDLE (or another text editor)
+- Have a go at changing the layout of the caves in the first string that was declared. Then play the game.
+** Badge It - Gold
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Have a read through the code of the game - you don't have to understand it all.
+- Try and change the HitPoints to make the game easier/harder
+- See if you can add an additional monster to the game
+- Take a screenshot of the functions you changed.
+** Badge It - Platinum
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+- Can you make any other changes to the game?
+- Maybe you could make a second board appear when all the monsters are killed
+- Perhaps you could add in a sword that the player can get to help increase the damage she does to the monsters
+- Use your imagination and have a go - if you break the code too much, just download another copy
+- Take screenshots of any functions you changed and use comments to explain what you have done.
