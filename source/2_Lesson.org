@@ -107,7 +107,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
-- Let's start with some basics. Create a new Python file called The_100_Game.py
+- Let's start with some basics. Create a new Python file called The-100-Game.py
 - If we're going to have a two player game, we'd best let our players state their names and save these values using variables.
 #+begin_src python
   playerOne = input('What is the name of Player One? ')

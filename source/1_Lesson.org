@@ -104,16 +104,12 @@
 - Because of this, some of the earliest games ever made were purely text-based games, that only used ASCII characters.
 [[file:https://upload.wikimedia.org/wikipedia/en/1/17/Rogue_Screen_Shot_CAR.PNG]]
 - To this day, many programmers still like to create text-based games. This is especially useful when trying out a knew language, as it let's the programmer play around with the logic of a programming language, without having to worry about the complicated world of rendering graphics.
-** Try It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: try
-:END:
 ** Badge It - Silver
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
 - Imagine you were tasked with creating a computer game, but you could only display ASCII characters on the screen and only take ASCII characters as input.
-- Look at this link [[https://http://en.wikipedia.org/wiki/ASCII#ASCII_printable_code_chart][ASCII LIST]]
+- Look at this link [[https://en.wikipedia.org/wiki/ASCII#ASCII_printable_code_chart][ASCII LIST]]
 - Create a list of three types of games that you could create and a short description for each one. By the end of this module, you might even be capable of creating one.
 ** Test It
 :PROPERTIES:
@@ -149,3 +145,4 @@
 - Perhaps you could add in a sword that the player can get to help increase the damage she does to the monsters
 - Use your imagination and have a go - if you break the code too much, just download another copy
 - Take screenshots of any functions you changed and use comments to explain what you have done.
+  
