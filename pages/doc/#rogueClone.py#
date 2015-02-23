@@ -1,5 +1,9 @@
 import random
 import os
+import sys
+os.environ['LINES'] = '40'
+os.environ['COLUMNS']= '80'
+
 
 ##HERE IS THE BOARD - YOU CAN EDIT IT TO CHANGE THE LAYOUT OF THE ROOMS, POSITIONS OF MONSTERS AND POSITIONS OF HEALING SHRINES
 layout='''___________________________________________________________________________
