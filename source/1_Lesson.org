@@ -117,7 +117,7 @@
 :END:
 - [[file:doc/rogueClone.py][Download this file]] to your home folder.
 - Double click it to open it up.
-- You might need to resize the terminal on Windows - right click the top bad and choose properties
+- You might need to resize the terminal on Windows - right click the top bar and choose properties
 [[file:img/screen1.png]]
 [[file:img/screen2.png]]
 - This is a very simple (rogue-like) game that you can play. Use the W,A,S,D keys to control your movement (hitting return each time)
