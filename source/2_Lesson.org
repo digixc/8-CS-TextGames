@@ -219,7 +219,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
-- Open up your The_100_Game.py file again.
+- Open up your The-100-Game.py file again.
 - Our =while= loop will need to keep going until the players have a number totaling 100, so we'll need a variable to store the total number in.
 #+begin_src python
   total = 0
