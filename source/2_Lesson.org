@@ -158,7 +158,7 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
-- Save your original =The_100_Game.py= file.
+- Save your original =The-100-Game.py= file.
 - Create a new file called =whileLoops.py=
 - A =while= loop will keep running until a given condition is met.
 - The basic structure is...
@@ -302,13 +302,14 @@ type(answer)
 - You'll need to use all the following lines of code, and put them in the correct place (and order) in your script, to get it working
 #+begin_src python
 playerOneTurn=True
-print('$s WINS'%(playerTwo))
-print('$s WINS'%(playerOne))
+print('%s WINS'%(playerTwo))
+print('%s WINS'%(playerOne))
 print('%s - pick a number from one to ten'%(playerTwo))    
 print('%s - pick a number from one to ten'%(playerOne))
 if playerOneTurn == True:
-if playerOneTurn == True:
+if playerOneTurn == False:
 else:
 else:
+playerOne = not playerOne
 #+end_src
 - The game should keep track of who is the current player, prompt each player by name to make their turn, and congratulate the winner of the game at the end.
