@@ -215,11 +215,40 @@ fan = 1
 quality = 'best'
 print('%s are the %s band in the world, and I am their number %i fan.'%(band,quality,fan))
 #+end_src
+- Lastly, we can use string formatting with =input= as well as =print=
+#+begin_src python
+band = 'Nirvana'
+fan = 1
+quality = 'best'
+answer = input('So you agree that %s are the %s band in the world, and that I am their number %i fan .'%(band,quality,fan))
+#+end_src
+- This will print our the statement and then wait for the user to give an answer.
 ** Code It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
-- Now you know how to use string formating, we can move on with the game
+- Now you know how to use string formating, we can move on with the game.
+- We want the program to print out the number of counters in each heap, as well as the move that has just been made.
+- The heaps have already been taken care of, but we'll need a variable to store the last move.
+- Just beneath your assigned =heaps= variable, assign a new variable called =move=
+#+begin_src python
+move = 'No move yet '
+#+end_src
+- Now we'll add some code into the while loop.
+- To start off with, we want to use string formatting to print out a line that looks like this
+#+begin_src
+|  6  |  7  |  8  |   No move yet
+#+end_src
+- Where the numbers are obviously the numbers you have stored in each of your heaps.
+** Try It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: try
+:END:
+- Try and use string formatingto print the line.
+- Remember =%i= for integers and =%s= for strings.
+- Remember you can access a particular element of a list using =listname[index]= (=heaps[1]= for instance.
+- You can force a loop to exit by using the =break= command after the print statement.
+- Have a go at printing the line and get your teacher to check your work if you are not sure, before you continue.
 ** Design It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: design
