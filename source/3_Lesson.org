@@ -112,7 +112,7 @@
 - We're going to need to use a couple of data structures to accomplish this game.
 - The first are lists.
 - In Python a list is an ordered collection of elements. They can be integers, floats, strings, variables or even other lists.
-- We create a list, by giving it a name and then placing our elements inside of square brackets =[ ]= with commas seperating each element.
+- We create a list, by giving it a name and then placing our elements inside of square brackets =[ ]= with commas separating each element.
 ** Code It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
@@ -233,7 +233,7 @@ people = {'Harry':'Cute','Zayne':'Mysterious','Liam':'Sensible','Harry':'Charmin
 - We can use this to query which elements are in any given compound.
 #+begin_src python
   compounds['Water']
-  'C' in compunds['Carbon dioxide']
+  'C' in compounds['Carbon dioxide']
   'Na' in compounds['Ammonia']
 #+end_src
 ** Badge It - Platinum
