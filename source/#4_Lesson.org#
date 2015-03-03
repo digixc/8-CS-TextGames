@@ -117,7 +117,7 @@
 - We need to use ASCII characters to create the graphic that is displayed on the screen.
 - We'll assign variables to have the values of the graphic.
 - The first couple have been done for you in the code below.
-- In python we use ='''= to print multiline strings.
+- In python we use ='''= to print multi-line strings.
 #+begin_src python
 stage0=''
 stage1 = '''
@@ -183,7 +183,7 @@ correctGuesses = 0
 :HTML_CONTAINER_CLASS: code
 :END:
 - We'll want to a way of storing the guesses the player has made, and ensuring that only letters are accepted.
-- The easisest way to do this is with a data structure that stores all the letters of the alphabet.
+- The easiest way to do this is with a data structure that stores all the letters of the alphabet.
 - Let's start with a simple string.
 #+begin_src python
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
@@ -207,7 +207,7 @@ alphabet = 'abcdefghijklmnopqrstuvwxyz'
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
-- The easiset way of learning about list comprehensions is to write some.
+- The easiest way of learning about list comprehensions is to write some.
 #+begin_src python
 numbersto10 = [number for number in range(10)]
 #+end_src
@@ -279,7 +279,7 @@ import random
 - to the very top of your python file.
 - then after the =words= list we can add the line
 #+begin_src python
-word = random.cnoice(word)
+word = random.choice(word)
 #+end_src
 - This will pick a random word from the words list for use with the game.
 - Last of all, before we start on the actual game logic, we'll set a variable to state that the game is running.
@@ -291,7 +291,7 @@ gameOn = True
 :HTML_CONTAINER_CLASS: learn
 :END:
 - Because the hangman game is a little more complicated than before, we're going to break it up into functions.
-- Functions are blocks of code that perform a ... funtion.
+- Functions are blocks of code that perform a ... function.
 - In Python we create a function using the keyword =def=
 #+begin_src python
 def foo():
@@ -302,7 +302,7 @@ def foo():
 :HTML_CONTAINER_CLASS: code
 :END:
 - Let's start by creating a function to print out the word that the user is guessing. If a letter has been guessed, then it should be displayed, otherwise we should display an =_=.
-- We'll start by giving the function a neam.
+- We'll start by giving the function a name.
 #+begin_src python
 def displayWord():
 #+end_src
@@ -334,7 +334,7 @@ def displayWord():
 #+begin_src python
 word = 'hello'
 #+end_src
-- Now let's run the funtion
+- Now let's run the function
 #+begin_src language
 displayWord()
 #+end_src
@@ -414,7 +414,7 @@ bar()
       print(foo)
       print(baz)
 #+end_src
-- Save, run and call the function from the interpreter againe.
+- Save, run and call the function from the interpreter again.
 - Let's try the same change to foo.
 #+begin_src python
   foo = 'I am foo'
@@ -452,7 +452,7 @@ bar()
 - The next function is going to allow the player to make a guess of a letter.
 - It will then increase the =stageindex= if they get it wrong and remove the letter from the alphalist.
 - It will increase the =correctGuesses= if they get it right and remove the letter from the alphalist.
-- Becuase we're altering the =stageindex= and =correctGuesses= variables, we'll need to use the =global= keyword.
+- Because we're altering the =stageindex= and =correctGuesses= variables, we'll need to use the =global= keyword.
 ** Badge It - Gold
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
