@@ -166,7 +166,7 @@
   while something:
       do something
 #+end_src
-** Badge It - Gold
+** Badge It - Gold (Part I)
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
@@ -214,6 +214,10 @@
       y = x - y
       print(x)
 #+end_src
+** Badge It - Gold (Part II)
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
 - Create a while loop that asks for user input and then prints out that user input until the user types exit.
 - Create a while loop that prints out all the [[http://www.mathsisfun.com/algebra/triangular-numbers.html][triangle numbers]] up to 100
 - Create a while loop that asks the user to enter a number, and tells them to keep guessing until they choose the number 7.
