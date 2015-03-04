@@ -246,3 +246,4 @@ people = {'Harry':'Cute','Zayne':'Mysterious','Liam':'Sensible','Harry':'Charmin
 <iframe width="420" height="315" src="https://www.youtube.com/embed/Kov2G0GouBw" frameborder="0" allowfullscreen></iframe>
 #+end_html
 - Using what you know about dictionaries of lists, alter your code so that you can play Rock, Paper, Scissors, Lizard, Spock with the computer.
+  
