@@ -253,6 +253,10 @@ shore to help ease boring eye strain tonight'.split()]
 #+begin_src python
 List8 = [[row[i] for row in [[1,2,3],[4,5,6],[7,8,9]]]for i in range(3)]
 #+end_src
+** Badge It - Gold  (Part I)
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
 - Use list comprehensions to create the following lists.
   1. [-10,-9,-8,-7,-6,-5,-4,-3,-2,-1,0]
   2. A list of all consonants in the sentence 'The quick brown fox jumped over the lazy dog'
@@ -453,7 +457,7 @@ bar()
 - It will then increase the =stageindex= if they get it wrong and remove the letter from the alphalist.
 - It will increase the =correctGuesses= if they get it right and remove the letter from the alphalist.
 - Because we're altering the =stageindex= and =correctGuesses= variables, we'll need to use the =global= keyword.
-** Badge It - Gold
+** Badge It - Gold (Part II)
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
@@ -482,7 +486,7 @@ myList.remove(element)
 - The basic concept will be:
   1. If the length of the word being guessed is equal to the value of =correctGuesses= then we can print out the current stage, and a message that the player has won, and finally change the =gameOn= variable to False.
   2. If the =stageIndex= is equal to 8 (or whatever the final stage you have_, then we should print out the current stage, send a message that the player has lost, and then set =gameOn= to false.
-** Badge It
+** Badge It - Platinum
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
