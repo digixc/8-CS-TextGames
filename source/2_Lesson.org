@@ -316,6 +316,6 @@ if playerOneTurn == True:
 if playerOneTurn == False:
 else:
 else:
-playerOneTurn = not playerOne
+playerOneTurn = not playerOneTurn
 #+end_src
 - The game should keep track of who is the current player, prompt each player by name to make their turn, and congratulate the winner of the game at the end.
