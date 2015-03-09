@@ -179,7 +179,7 @@ random.randrange(0,10,2)
   1. Create a list called =choices= that contains the words - rock, paper and scissors.
   2. Set a variable called =computerChoice= that gets set to a random element from the list.
   3. Set a variable called =playerChoice= that lets the user choose from rock, paper or scissors, by asking for some =input=
-  4. Print out the computer and player's choice on a single line.
+  4. Print out the computer and player's choice on a single line (remember string formatting from last lesson (%s))
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
