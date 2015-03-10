@@ -283,7 +283,7 @@ import random
 - to the very top of your python file.
 - then after the =words= list we can add the line
 #+begin_src python
-word = random.choice(word)
+word = random.choice(words)
 #+end_src
 - This will pick a random word from the words list for use with the game.
 - Last of all, before we start on the actual game logic, we'll set a variable to state that the game is running.
@@ -503,4 +503,4 @@ while gameOn == True:
     Guess()
     checkEnd()
 #+end_src
-- Try running you game and see whether it is all working correctly.
+- Try running your game and see whether it is all working correctly.
