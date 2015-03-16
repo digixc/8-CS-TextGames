@@ -111,6 +111,13 @@
 - The first thing you'll need to do is draw a simple map.
 - Look at the map below. It's a very simple example, and you make yours more complicated if you like.
 [[file:img/map.jpg]]
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+- =Functions= are an extremely important concept in programming, and they are going to be key in the implementation of your game.
+- A function is a unit of code that performs a task.
+- The code within a function is only run by the computer when the function is =called=
 ** Research It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: research

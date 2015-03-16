@@ -91,3 +91,5 @@ def room2():
     print('You are in a very dark room. You can not see anything. You know there is an exit to the East though')
     showItems('room2')
     action('room2')
+
+
