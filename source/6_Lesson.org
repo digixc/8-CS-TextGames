@@ -91,7 +91,7 @@
 :HTML_CONTAINER_CLASS: save
 :END:
 
-* Nim - the full game
+* Adventure Game Part II
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: activity
 :END:
@@ -99,199 +99,146 @@
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
-
-- Nim is generally considered to be the first computer game ever created.
-- In the 1950s a specialist computer called NIMROD was designed and built just to play the game of Nim.
-[[https://www.wired.com/images_blogs/gamelife/2010/06/nimrod.jpg]]
-- This was the Xbox of the 50s.
-** Learn It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: learn
-:END:
-- Nim is a fairly simple game. Two players take it in turns to remove counters from one of three (or more) heaps.
-- The person who removes the last counter is considered the winner (in normal play).
-- A typical game of Nim would look something like this...
-#+begin_src
-|Heap 1|Heap 2|Heap 3|       Move
- 
-   3      4      5           Bob   takes 2 from A
-   1      4      5           Alice takes 3 from C
-   1      4      2           Bob   takes 1 from B
-   1      3      2           Alice takes 1 from B
-   1      2      2           Bob   takes entire A heap, leaving two 2s.
-   0      2      2           Alice takes 1 from B
-   0      1      2           Bob   takes 1 from C leaving two 1s.
-   0      1      1           Alice takes 1 from B
-   0      0      1           Bob   takes entire C heap and wins.
-#+End_src
-- You're going to code a 2 player game of Nim using Python.
+- An integral part of most adventure games is the ability to interact with your environment.
+- You'll notice that on the original map, there were some objects drawn.
+[[file:img/map.jpg]]
+- We're going to need a couple of new functions so that we can view and interact with these objects
 ** Code It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
-- The first couple of lines of code you should be able to handle yourself.
-- Use a print statement to tell the players the rules of the game.
-- It should read as follows
-#+begin_src
-Choose a number to move and a heap to move it from, seperated by a space
-#+end_src
-- Then print an empty line, followed by a third print statement for the heaps.
-#+begin_src
-|Heap 1|Heap 2|Heap 3|Move
-#+end_src
-** Code It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: code
-:END:
-- Now we're going to need a way of storing the number of counters in each heap.
-- A sensible data structure to use would be a list.
+- Let's start by creating a data structure to hold the items that are in each room.
+- Again, you can adapt this to suit your own game.
 #+begin_src python
-heaps = [6,7,8]
+roomItems = {'corridor':[],'room1':['torch'],'room2':['knife','pen']}
 #+end_src
-- The numbers you use for each heap don't really matter to start off with.
+- You'll notice that even if the room is empty, we still link it to a list, that is also empty.
 ** Code It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
-- We want the game to run until there are no counter left in any of the heaps.
-- A =while= loop would be a sensible loop to choose.
-- The while loop would keep running (and so the game keeps running) until the heaps list looks like this =[0,0,0]=
+- Now we'll create a function to show the Items.
 #+begin_src python
-  while (heaps[0] + heaps[1] + heaps[2]) > 0:
-      print(heaps)
+  def showItems(location):
+      items = roomItems[location]
 #+end_src
-- The print is just there so that we can test the code (ctrl-c) should quit your running program.
-** Research It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: research
-:END:
-- There is a simpler way of getting python to find the =sum= of the contents of a list.
-- Do a little research and see if you can find out how.
+- The single line of code in the function looks up the room it the dictionary we've created and stores the contents of the room in a new list called =items=
 ** Badge It - Silver
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- A nice edition to the game, might be to make the numbers in each heap random.
-- You've used[[https://bournetocode.com/projects/8-CS-Cryptography/pages/3_Lesson.html][ Python to generate random numbers before]].
-- This is a little different though, and will require some research.
-- See if set up the code so that each heap has a random number of counters between 1 and 10.
-** Learn It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: learn
-:END:
-- If you look above at the example of the Nim game, you see that we want to not only print out the contents of each heap, but also the players' moves.
-- To print this nicely, you're going to need to learn to use =string formating=
-- String formating allows us to print the value of a variable or variables within a string.
-** Learn It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: learn
-:END:
-- Open up an =interpreter= so we can practice some string formatting.
-- Try and write the following lines of code.
-#+begin_src python
-  print('One Direction are the %s band ever'%('best'))
-#+end_src
-- You should see that the where you wrote =%s=, it has been replaced by the word =best=
-- We can use variables instead of strings as well. Try this, again using the =interpreter=.
-#+begin_src python
-  quality = 'worst'
-  print('One Direction are the %s band ever'%(quality))
-#+end_src
-- =%s= is a shorthand notation for =string=. Try this.
-#+begin_src python
-  number = 1
-  print("I am One Direction's number %s fan"%(number))
-#+end_src
-- We can see that this throws an error.
-- If we want to use string formatting with integers, we need to use the =%i= shorthand.
-#+begin_src python
-  number = 7000000000
-  print("I am One Direction's number %i fan"%(number))
-#+end_src
-- We can use string formatting with many different variables. Try this, and alter the variables as you see fit.
-#+begin_src python
-band = 'Nirvana'
-fan = 1
-quality = 'best'
-print('%s are the %s band in the world, and I am their number %i fan.'%(band,quality,fan))
-#+end_src
-- Lastly, we can use string formatting with =input= as well as =print=
-#+begin_src python
-band = 'Nirvana'
-fan = 1
-quality = 'best'
-answer = input('So you agree that %s are the %s band in the world, and that I am their number %i fan .'%(band,quality,fan))
-#+end_src
-- This will print our the statement and then wait for the user to give an answer.
+- Now we want to print the contents of the room so the player knows what's visible.
+- Remember, you can find the length of the items list by using =len(items)=
+- Use conditional selection =if=, =elif=, =else= statements so that:
+  1. If the length of item is 0
+     - print out that there are no items in the room
+  2. If the length of the list is 1
+     - print out that there is the item in the room using string formatting.
+  3. If the length of the list is 2
+     - print out that there are two items in the room using string formatting.
+  4. Else
+     - Leave this option blank for now. We'll code that in the next section
 ** Code It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
-- Now you know how to use string formating, we can move on with the game.
-- We want the program to print out the number of counters in each heap, as well as the move that has just been made.
-- The heaps have already been taken care of, but we'll need a variable to store the last move.
-- Just beneath your assigned =heaps= variable, assign a new variable called =move=
+- The code for handling multiple items in the room in a grammatically correct way is a little tricky.
+- We want the print statement to read something like
 #+begin_src python
-move = 'No move yet '
+'You see a knife, a pen and a torch here'
 #+end_src
-- Now we'll add some code into the while loop.
-- To start off with, we want to use string formatting to print out a line that looks like this
-#+begin_src
-|  6  |  7  |  8  |   No move yet
+- The code below can be inserted into your =else= statement from above.
+#+begin_src python
+          print('You see a ',end=' ')
+          for i, item in enumerate(items):
+              if i == len(items) -1:
+                  print('and a '+item)
+              else:
+                  print(item + ',',end=' ')
 #+end_src
-- Where the numbers are obviously the numbers you have stored in each of your heaps.
-** Try It
+- It =iterates= over the list of items, adding a comma after each item is printed.
+- If the item is the final item though, it adds an ='and'= instead.
+** Code It
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: try
+:HTML_CONTAINER_CLASS: code
 :END:
-- Try and use string formatingto print the line.
-- Remember =%i= for integers and =%s= for strings.
-- Remember you can access a particular element of a list using =listname[index]= (=heaps[1]= for instance.
-- You can force a loop to exit by using the =break= command after the print statement.
-- Have a go at printing the line and get your teacher to check your work if you are not sure, before you continue.
-** Design It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: design
-:END:
-
-** Build It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: build
-:END:
-
-** Test It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: test
-:END:
-
+- Now call the =showItems()= function in each of your room functions.
+- Make sure to pass it the room's name as a string.
 ** Run It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: run
 :END:
-
-** Document It
+- Run your game and have a play around.
+- Make sure that all the items are being displayed correctly.
+** Learn It
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: document
+:HTML_CONTAINER_CLASS: learn
 :END:
-
+- The chances are we're going to want the player to be able to do more than just move around.
+- We might want the player to be able to:
+  1. Take an item
+  2. Use an item
+  3. Move
+  4. Fight
+  5. Look around
+  6. Anything else you can think of. 
 ** Code It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
-
-** Program It
+- Let's make a new function to handle player actions.
+#+begin_src python
+def action(location):
+    print('What would you like to do')
+    print('1. Take an item')
+    print('2. Use an item')
+    print('3. Leave')
+    print('4. Interact')
+    print('5. Look again')
+    choice = input()
+    if choice == '1':
+        takeItems(location)
+    elif choice == '2':
+        useItem(location)
+    elif choice == '3':
+        commands[Moving(location)]()
+    elif choice == '4':
+        fight(location)
+    elif choice == '5':
+        command[location]()
+    else:
+        print('You can not do that')
+        commands[location]()
+#+end_src
+- Feel free to add your own choices as well.
+- Add the =action()= function call into each of your room functions, in place of the =Moving()= function call.
+** Badge It - Gold
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: program
+:HTML_CONTAINER_CLASS: badge
 :END:
-
-** Try It
+- Let's try and implement the =takeItems(location)= function.
+- You'll need to declare a list, near the top of your code, to act as the players inventory.
+#+begin_src python
+playerItems = []
+#+end_src
+- Now use the algorithm below, to create the function
+#+begin_src python
+def takeItems(location):
+#+end_src
+- Follow the following algorithm to code the function.
+  1. Set a new variable called =items= to be the contents of the room
+  2. If the length of the =items= list is 0, then print that the room is empty, and call the action(location) function.
+  3. Ask the player which item they want to take.
+  4. If the item they want to take is not in the list, then keep asking the player what item they want to take.
+  5. If the item is in the list then remove it from the roomItems dictionary.
+     - n.b you can use =.remove()= to remove items from lists.
+  6. Add the item to a global list that represents the players inventory.
+  7. Tell the player they have taken the item.
+  8. Run the action(location) function again.
+** Badge It - Platinum
 :PROPERTIES:
-:HTML_CONTAINER_CLASS: try
+:HTML_CONTAINER_CLASS: badge
 :END:
-
-
-** Save It
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: save
-:END:
-
+- The rest is up to you now.
+- You can create any functions you like, to perform various actions.
+- You could create a function for using items, fighting, running away. The choices are up to you.
