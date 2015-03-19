@@ -214,7 +214,7 @@ people = {'Harry':'Cute','Zayne':'Mysterious','Liam':'Sensible','Harry':'Charmin
 #+begin_src python
 import random
 people = ['Niall','Zayn','Liam','Harry','Louis']
-descriptions = {'Harry':'Cute','Zayne':'Mysterious','Liam':'Sensible','Niall':'Charming','Louis':'Funny'}
+descriptions = {'Harry':'Cute','Zayn':'Mysterious','Liam':'Sensible','Niall':'Charming','Louis':'Funny'}
 person = random.choice(people)
 guess = input('Guess what %s is described as '%(person))
 if descriptions[person] == guess:
