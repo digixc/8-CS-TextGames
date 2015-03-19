@@ -209,9 +209,31 @@ people = {'Harry':'Cute','Zayne':'Mysterious','Liam':'Sensible','Harry':'Charmin
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
 :END:
+- We can now use the dictionary to create a little guessing game.
+- Copy and paste the code below into a new file and then run it.
+#+begin_src python
+import random
+people = ['Niall','Zayn','Liam','Harry','Louis']
+descriptions = {'Harry':'Cute','Zayne':'Mysterious','Liam':'Sensible','Niall':'Charming','Louis':'Funny'}
+person = random.choice(people)
+guess = input('Guess what %s is described as '%(person))
+if descriptions[person] == guess:
+    print('You are correct')
+else:
+    print('You are wrong')
+#+end_src
+- Once you've played a couple of times, make sure you have a good look at the code and that you understand what is going on.
 
-- Let's use a dictionary to build up the rules of Rock, Paper, Scissors.
-- Create a dictionary where the =keys= are 'rock', 'paper' and 'scissors', and the values are the item that each one beats.
+** Code It
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: code
+:END:
+ - Let's use a dictionary to build up the rules of Rock, Paper, Scissors.
+ - Create a dictionary where the =keys= are 'rock', 'paper' and 'scissors', and the values are the item that each one beats.
+- For instance:
+#+begin_src python
+'rock':'scissors'
+#+end_src
 ** Badge It - Gold
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
@@ -219,7 +241,7 @@ people = {'Harry':'Cute','Zayne':'Mysterious','Liam':'Sensible','Harry':'Charmin
 - We can now add a few more lines to the code, to decide who wins.
 - You should know enough about conditional selection to do this yourself (=if=, =elif= and =else=)
   1. =if= the =playerChoice= and =computerChoice= are equal, then the program should =print= 'Draw'
-  2. if the =value= of the =key= of the =playerChoice= is equal to the =computerChoice=, then the program should =print= 'You win'.
+  2. =if= the =playerChoice= is looked up in the dictionary, and its =value= is equal to the =computerChoice=, then the program should =print= 'You win'
   3. Otherwise the program should =print= 'I win'
 ** Code It
 :PROPERTIES:
