@@ -105,7 +105,7 @@
   1. The word should be displayed with =_= in place of each letter.
   2. The player should guess a letter.
   3. If the letter is in a list of all letters, the letter should be removed from the list.
-  4. If the letter is in the word, then the =_= should be replaced with the letter, and we should store how many correct guesses the player has had.
+  4. If the letter is in the word, then the =_= should be replaced with the letter, and we should store how many correct letters the player has guessed (This takes into account repeats).
   5. If the letter is not in the word, then the gallows can begin to be drawn.
   6. The player should be asked for another letter.
   7. The game ends when the player has made correct guesses that equal the length of the word, or the last stage of the gallows has been drawn.
@@ -173,10 +173,10 @@ print(stage[4])
 :END:
 - Let's add in a couple of variables that will probably be important.
 - We'll want to store which stage of the gallows the player has currently reached.
-- We'll also want to know how many correct guesses the player has made.
+- We'll also want to know how many correct letters the player has guessed.
 #+begin_src python
 stageindex = 0
-correctGuesses = 0
+correctLetters = 0
 #+end_src
 ** Code It
 :PROPERTIES:
@@ -471,7 +471,7 @@ def Guess():
   3. Use conditional selection =if,elif,else= to:
      1. Print that the character can't be found if the =guess= is =not in= the =alphalist=
      2. Otherwise, if the =guess= is =not in= the =word=, then increase =stageindex= by one and remove the =guess= from the alphalist.
-     3. Otherwise, remove the =guess= from the =alphalist= and increase the =correctGuesses= by 1.
+     3. Otherwise, remove the =guess= from the =alphalist= and =for= each letter in the word, if the letter is equal to the guess, increase =correctLetters= by 1.
 - Note - to remove an item from a list you can use code like this.
 #+begin_src python
 myList.remove(element)
@@ -484,7 +484,7 @@ myList.remove(element)
 - We need to check if the game has ended or not.
 - So we're going to need access to the =global= =gameOn= variable.
 - The basic concept will be:
-  1. If the length of the word being guessed is equal to the value of =correctGuesses= then we can print out the current stage, and a message that the player has won, and finally change the =gameOn= variable to False.
+  1. If the length of the word being guessed is equal to the value of =correctLetters= then we can print out the current stage, and a message that the player has won, and finally change the =gameOn= variable to False.
   2. If the =stageIndex= is equal to 8 (or whatever the final stage you have_, then we should print out the current stage, send a message that the player has lost, and then set =gameOn= to false.
 ** Badge It - Platinum
 :PROPERTIES:
