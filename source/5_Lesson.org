@@ -281,7 +281,7 @@ def Moving(location):
 :END:
 - To finish off this part of the game, we need the =Moving= function to be able to call the room functions when the player has chosen the direction.
 - Again, this is a little complicated, so don't worry if you don't understand it perfectly.
-- At the top of your program, we'll create a new dictionary. This will link =room= to function call.
+- At the bottom of your program, we'll create a new dictionary. This will link =room= to functions.
 #+begin_src python
 commands = {'room1':room1,'room2':room2,'corridor':corridor}
 #+end_src
@@ -305,7 +305,7 @@ def Moving(location):
 def corridor():
     print('You are in a long corridor')
     print('There are exits to the North and West')
-    Moving('corridor')
+    command[Moving('corridor')]()
 #+end_src
 ** Try It
 :PROPERTIES:

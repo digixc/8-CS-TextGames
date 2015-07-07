@@ -1,7 +1,5 @@
 map = {'corridor':['room1','','','room2'],'room1':['','','corridor',''],'room2':['','corridor','','']}
 
-commands = {'room1':room1,'room2':room2,'corridor':corridor}
-
 roomItems = {'corridor':[],'room1':['torch'],'room2':['knife','pen']}
 
 playerItems = []
@@ -71,7 +69,7 @@ def useItems(location):
     print('Not implemented yet')
     action(location)
     
-def useItems(location):
+def fight(location):
     print('Not implemented yet')
     action(location)
     
@@ -92,4 +90,5 @@ def room2():
     showItems('room2')
     action('room2')
 
-
+commands = {'room1':room1,'room2':room2,'corridor':corridor}
+corridor()
