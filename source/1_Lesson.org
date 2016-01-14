@@ -102,7 +102,7 @@
 - In the early days of computers, graphics were a rare thing.
 - Most users interacted with their computers using a terminal, which was only capable of rendering text.
 - Because of this, some of the earliest games ever made were purely text-based games, that only used ASCII characters.
-[[file:https://upload.wikimedia.org/wikipedia/en/1/17/Rogue_Screen_Shot_CAR.PNG]]
+[[./img/rogue80.jpg]]
 - To this day, many programmers still like to create text-based games. This is especially useful when trying out a knew language, as it let's the programmer play around with the logic of a programming language, without having to worry about the complicated world of rendering graphics.
 ** Badge It - Silver
 :PROPERTIES:
@@ -128,7 +128,7 @@
 :END:
 - Now open up the file in IDLE (or another text editor)
 - Have a go at changing the layout of the caves in the first string that was declared. Then play the game.
-** Badge It - Gold
+** Extension activty 1  
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
@@ -136,7 +136,8 @@
 - Try and change the HitPoints to make the game easier/harder
 - See if you can add an additional monster to the game
 - Take a screenshot of the functions you changed.
-** Badge It - Platinum
+** Extension activity 2
+DEADLINE: <2016-01-14 Thu>
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:

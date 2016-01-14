@@ -320,5 +320,5 @@ corridor()
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
-- It would be nice if their were more directions available, up and down for instance.
+- It would be nice if there were more directions available, up and down for instance.
 - Alter your map to include some ladders or stairs and then adapt your code to take into account the new directions.
