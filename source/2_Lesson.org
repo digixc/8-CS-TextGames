@@ -143,11 +143,6 @@
 - At the end of the print statement (but inside the brackets), we place the variable names, whose values we want in the string.
 - Notice that the variable names have brackets around them as well - in Python, when we place items in brackets like this, it is called a tuple.
 - e.g =(1,2,3,4)= or =('abc','def','ghi')= or =(foo,bar,baz)=
-** Badge It - Silver
-:PROPERTIES:
-:HTML_CONTAINER_CLASS: badge
-:END:
-- Try and add another =print= statement using string formatting that tells playerOne that they will go first and that playerTwo will go second.
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
@@ -166,7 +161,7 @@
   while something:
       do something
 #+end_src
-** Badge It - Gold (Part I)
+** Badge It - Silver
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
@@ -214,7 +209,7 @@
       y = x - y
       print(x)
 #+end_src
-** Badge It - Gold (Part II)
+** Badge It - Gold
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
