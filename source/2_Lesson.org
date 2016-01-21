@@ -11,7 +11,7 @@
 #+BEGIN_HTML
   <div class="github-fork-ribbon-wrapper left">
     <div class="github-fork-ribbon">
-      <a href="https://github.com/MarcScott/8-CS-TextGames">Fork me on GitHub</a>
+      <a href="https://github.com/stsb11/8-CS-TextGames">Fork me on GitHub</a>
     </div>
   </div>
 <div id="stickyribbon">
@@ -100,7 +100,7 @@
 :HTML_CONTAINER_CLASS: learn
 :END:
 - Nim was one of the earliest Computer Games ever created.
-- In fact, a special computer called the [[http://en.wikipedia.org/wiki/Nimrod_%2528computing%2529][NIMROD]] was created for the sole purpose of playing the game.
+- In fact, a special computer called the [[https://en.wikipedia.org/wiki/Nimrod_(computing)][NIMROD]] was created for the sole purpose of playing the game.
 - There are numerous variants of the game, so we'll start off with one of the simplest - [[http://en.wikipedia.org/wiki/Nim#The_100_game][The 100 game]]
 - Have a read of the rules, so you understand the game
 ** Code It
@@ -252,7 +252,7 @@
   type(total)
 #+end_src
 - Now try this
-#+being_src python
+#+begin_src python
 answer = input('Give me a number')
 #+end_src
 - Now give the interpreter a number, and then type:
