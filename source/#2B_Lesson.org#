@@ -1,3 +1,4 @@
+
 #+STARTUP:indent
 #+HTML_HEAD: <link rel="stylesheet" type="text/css" href="css/styles.css"/>
 #+HTML_HEAD_EXTRA: <link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono|Ubuntu' rel='stylesheet' type='text/css'>
@@ -113,7 +114,7 @@
 :END:
 - The human will pick their own choice and the computer will pick one at random.
 - For the computer to choice at random the python random module must be imported, this is done in the very first line of your code. 
-- The possible choices are going to be stored in List â€“ a python data type for holding multiple items.
+- The possible choices are going to be stored in List œôòó a python data type for holding multiple items.
 - The =random.randint= function will be used to create a random number between 0 and 2.
 [[./img/2-1.png]]
 - Why 0 to 2?
@@ -130,7 +131,7 @@ Please create a table, link the example below, of all possible outcomes.
 [[./img/2-4.png]]
 - Now that would be many lines of code but do we need to program all the possible cases?
 [[./img/2-5.png]]
-- If the computer and human choose the same, itâ€™s a draw
+- If the computer and human choose the same, itœôòùs a draw
 - If the outcome this 1 of the 3 computer win cases, the computer wins
 - Else the human must have won.
 ** Code It
