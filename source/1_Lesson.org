@@ -135,7 +135,13 @@
 - Have a read through the code of the game - you don't have to understand it all.
 - Try and change the HitPoints to make the game easier/harder
 - See if you can add an additional monster to the game
-- Take a screenshot of the functions you changed.
+- Take a screenshot of the functions you changed. Upload to your screenshot to the week1 Gold, then finish the self-assessment below.
+** Badge It - Gold
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+- After you have done the above extension tasks, take this [[https://www.bournetolearn.com/quizzes/y8-textGames/Lesson_1/Gold/index.php][self assessment quiz]]. Please don't forget to upload the screenshot so your teacher can verify that you actaully have done the tasks.
 ** Extension activity 2
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
@@ -144,5 +150,11 @@
 - Maybe you could make a second board appear when all the monsters are killed
 - Perhaps you could add in a sword that the player can get to help increase the damage she does to the monsters
 - Use your imagination and have a go - if you break the code too much, just download another copy
-- Take screenshots of any functions you changed and use comments to explain what you have done.
+- Take screenshots of any functions you changed and use comments (starting your explanation with a # in the code) to explain what you have done. Upload to your screenshots to the week1 platinum, then finish the self-assessment below.
   
+** Badge It - Platinum
+:PROPERTIES:
+:HTML_CONTAINER_CLASS: badge
+:END:
+
+- After you have done the above extension tasks, take this [[https://www.bournetolearn.com/quizzes/y8-textGames/Lesson_1/Platinum/index.php][self assessment quiz]]. Please don't forget to upload the screenshots so your teacher can verify that you actaully have done the tasks.
