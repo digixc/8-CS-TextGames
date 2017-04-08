@@ -209,6 +209,8 @@
       y = x - y
       print(x)
 #+end_src
+
+- Take this [[https://www.bournetolearn.com/quizzes/y8-textGames/Lesson_2/Silver/index.php][self-assessment quiz]] after you have uploaded your work.
 ** Badge It - Gold
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
@@ -216,6 +218,7 @@
 - Create a while loop that asks for user input and then prints out that user input until the user types exit.
 - Create a while loop that prints out all the [[http://www.mathsisfun.com/algebra/triangular-numbers.html][triangle numbers]] up to 100
 - Create a while loop that asks the user to enter a number, and tells them to keep guessing until they choose the number 7.
+- Take this [[https://www.bournetolearn.com/quizzes/y8-textGames/Lesson_2/Gold/index.php][self-assessment quiz]] after you have uploaded your code of the three while loops.
 ** Code It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: code
@@ -314,3 +317,4 @@ else:
 playerOneTurn = not playerOneTurn
 #+end_src
 - The game should keep track of who is the current player, prompt each player by name to make their turn, and congratulate the winner of the game at the end.
+- Take this [[https://www.bournetolearn.com/quizzes/y8-textGames/Lesson_2/Platinum/index.php][self-assessment quiz]] after you have uploaded your code of your finished 100 game.
