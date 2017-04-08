@@ -176,7 +176,7 @@ for the JavaScript code in this tag.
 </li>
 <li>If the letter is in a list of all letters, the letter should be removed from the list.
 </li>
-<li>If the letter is in the word, then the <code>_</code> should be replaced with the letter, and we should store how many correct guesses the player has had.
+<li>If the letter is in the word, then the <code>_</code> should be replaced with the letter, and we should store how many correct letters the player has guessed (This takes into account repeats).
 </li>
 <li>If the letter is not in the word, then the gallows can begin to be drawn.
 </li>
@@ -206,26 +206,26 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">stage0</span>=<span style="color: #2aa198;">''</span>
-<span style="color: #6c71c4;">stage1</span> = <span style="color: #2aa198;">'''</span>
-<span style="color: #2aa198;">_______________'''</span>
-<span style="color: #6c71c4;">stage2</span> = <span style="color: #2aa198;">'''</span>
-<span style="color: #2aa198;">|</span>
-<span style="color: #2aa198;">|</span>
-<span style="color: #2aa198;">|</span>
-<span style="color: #2aa198;">|</span>
-<span style="color: #2aa198;">|</span>
-<span style="color: #2aa198;">|</span>
-<span style="color: #2aa198;">|\______________'''</span>
-<span style="color: #6c71c4;">stage3</span> = <span style="color: #2aa198;">'''</span>
-<span style="color: #2aa198;">__________</span>
-<span style="color: #2aa198;">|/</span>
-<span style="color: #2aa198;">|</span>
-<span style="color: #2aa198;">|</span>
-<span style="color: #2aa198;">|</span>
-<span style="color: #2aa198;">|</span>
-<span style="color: #2aa198;">|</span>
-<span style="color: #2aa198;">|\______________'''</span>
+<pre class="src src-python">stage0=''
+stage1 = '''
+_______________'''
+stage2 = '''
+|
+|
+|
+|
+|
+|
+|\______________'''
+stage3 = '''
+__________
+|/
+|
+|
+|
+|
+|
+|\______________'''
 </pre>
 </div>
 </div>
@@ -248,7 +248,7 @@ for the JavaScript code in this tag.
 <li>Probably the best way of doing this is to use a list.
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">stage</span> = [stage0,stage1,stage2,stage3,stage4,stage5,stage6,stage7,stage8]
+<pre class="src src-python">stage = [stage0,stage1,stage2,stage3,stage4,stage5,stage6,stage7,stage8]
 </pre>
 </div>
 </li>
@@ -270,7 +270,7 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #859900;">print</span>(stage[4])
+<pre class="src src-python">print(stage[4])
 </pre>
 </div>
 <ul class="org-ul">
@@ -289,13 +289,13 @@ for the JavaScript code in this tag.
 </li>
 <li>We'll want to store which stage of the gallows the player has currently reached.
 </li>
-<li>We'll also want to know how many correct guesses the player has made.
+<li>We'll also want to know how many correct letters the player has guessed.
 </li>
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">stageindex</span> = 0
-<span style="color: #6c71c4;">correctGuesses</span> = 0
+<pre class="src src-python">stageindex = 0
+correctLetters = 0
 </pre>
 </div>
 </div>
@@ -313,7 +313,7 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">alphabet</span> = <span style="color: #2aa198;">'abcdefghijklmnopqrstuvwxyz'</span>
+<pre class="src src-python">alphabet = 'abcdefghijklmnopqrstuvwxyz'
 </pre>
 </div>
 <ul class="org-ul">
@@ -326,8 +326,8 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">alphalist</span> = []
-<span style="color: #859900;">for</span> letter <span style="color: #859900;">in</span> alphabet:
+<pre class="src src-python">alphalist = []
+for letter in alphabet:
     alphalist.append(letter)
 </pre>
 </div>
@@ -355,7 +355,7 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">numbersto10</span> = [number <span style="color: #859900;">for</span> number <span style="color: #859900;">in</span> <span style="color: #6c71c4;">range</span>(10)]
+<pre class="src src-python">numbersto10 = [number for number in range(10)]
 </pre>
 </div>
 <ul class="org-ul">
@@ -376,8 +376,8 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">foo</span> = <span style="color: #2aa198;">'Hello World!'</span>
-<span style="color: #6c71c4;">bar</span> = [character <span style="color: #859900;">for</span> character <span style="color: #859900;">in</span> foo]
+<pre class="src src-python">foo = 'Hello World!'
+bar = [character for character in foo]
 </pre>
 </div>
 <ul class="org-ul">
@@ -392,52 +392,63 @@ for the JavaScript code in this tag.
 <ul class="org-ul">
 <li>Create a new file called ListComps.py
 </li>
-<li>Work out what each of these list comprehensions achieves. Don't worry if you don't understand them all fully. The first few should be okay, but the later ones are just to show you how powerful list comprehensions can be.
+<li>Work out what each of these list comprehensions achieves by running the code. Look at the print out and try to work out how each one works. Don't worry if you don't understand them all fully. The first few should be okay, but the later ones are just to show you how powerful list comprehensions can be.
+</li>
+<li>Take this<a href="https://www.bournetolearn.com/quizzes/y8-textGames/Lesson_4/Silver/index.php"> self-assessment quiz</a>when you have done running each of the code.
 </li>
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">List1</span> = [i <span style="color: #859900;">for</span> i <span style="color: #859900;">in</span> <span style="color: #6c71c4;">range</span>(20,10,-1)]
+<pre class="src src-python">List1 = [i for i in range(20,10,-1)]
+print(List1)
 </pre>
 </div>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">List2</span> = [j**2 <span style="color: #859900;">for</span> j <span style="color: #859900;">in</span> <span style="color: #6c71c4;">range</span>(10)]
+<pre class="src src-python">List2 = [j**2 for j in range(10)]
+print(List2)
 </pre>
 </div>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">List3</span> = [k <span style="color: #859900;">for</span> k <span style="color: #859900;">in</span> <span style="color: #6c71c4;">range</span>(100) <span style="color: #859900;">if</span> k % 2 == 0]
+<pre class="src src-python">List3 = [k for k in range(100) if k % 2 == 0]
+print(List3)
 </pre>
 </div>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">List4</span> = [l.lower() <span style="color: #859900;">for</span> l <span style="color: #859900;">in</span> <span style="color: #2aa198;">'ABCDEFG'</span>]
+<pre class="src src-python">List4 = [l.lower() for l in 'ABCDEFG']
+print(List4)
 </pre>
 </div>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">List5</span> = [<span style="color: #2aa198;">'_'</span> <span style="color: #859900;">for</span> m <span style="color: #859900;">in</span> <span style="color: #2aa198;">'Hello World!'</span>]
+<pre class="src src-python">List5 = ['_' for m in 'Hello World!']
+print(List5)
 </pre>
 </div>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">List6</span> = [n <span style="color: #859900;">for</span> n <span style="color: #859900;">in</span> <span style="color: #2aa198;">'The Quick Brown Fox'</span> <span style="color: #859900;">if</span> n.upper() == n <span style="color: #859900;">and</span> n != <span style="color: #2aa198;">' '</span>]
+<pre class="src src-python">List6 = [n for n in 'The Quick Brown Fox' if n.upper() == n and n != ' ']
+print(List6)
 </pre>
 </div>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">List7</span> = [word[0] <span style="color: #859900;">for</span> word <span style="color: #859900;">in</span> <span style="color: #2aa198;">'my race should continue on to the island </span>
-<span style="color: #2aa198;">shore to help ease boring eye strain tonight'</span>.split()]
+<pre class="src src-python">List7 = [word[0] for word in 'my race should continue on to the island 
+shore to help ease boring eye strain tonight'.split()]
+print(List7)
 </pre>
 </div>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">List8</span> = [[row[i] <span style="color: #859900;">for</span> row <span style="color: #859900;">in</span> [[1,2,3],[4,5,6],[7,8,9]]]<span style="color: #859900;">for</span> i <span style="color: #859900;">in</span> <span style="color: #6c71c4;">range</span>(3)]
+<pre class="src src-python">List8 = [[row[i] for row in [[1,2,3],[4,5,6],[7,8,9]]]for i in range(3)]
+print(List8)
 </pre>
 </div>
 </div>
 </div>
+
 <div id="outline-container-sec-1-11" class="outline-3 badge">
 <h3 id="sec-1-11">Badge It - Gold  (Part I)</h3>
 <div class="outline-text-3" id="text-1-11">
@@ -464,8 +475,8 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">alphabet</span> = <span style="color: #2aa198;">'qwertyuiopasdfghjklzxcvbnm'</span>
-<span style="color: #6c71c4;">alphalist</span> = [letter <span style="color: #859900;">for</span> letter <span style="color: #859900;">in</span> alphabet]
+<pre class="src src-python">alphabet = 'qwertyuiopasdfghjklzxcvbnm'
+alphalist = [letter for letter in alphabet]
 </pre>
 </div>
 <ul class="org-ul">
@@ -474,7 +485,7 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">words</span> = [<span style="color: #2aa198;">'computer'</span>,<span style="color: #2aa198;">'science'</span>,<span style="color: #2aa198;">'internet'</span>,<span style="color: #2aa198;">'www'</span>,<span style="color: #2aa198;">'onedirection'</span>]
+<pre class="src src-python">words = ['computer','science','internet','www','onedirection']
 </pre>
 </div>
 <ul class="org-ul">
@@ -487,7 +498,7 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #859900;">import</span> random
+<pre class="src src-python">import random
 </pre>
 </div>
 <ul class="org-ul">
@@ -498,7 +509,7 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">word</span> = random.choice(words)
+<pre class="src src-python">word = random.choice(words)
 </pre>
 </div>
 <ul class="org-ul">
@@ -509,7 +520,7 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">gameOn</span> = <span style="color: #268bd2;">True</span>
+<pre class="src src-python">gameOn = True
 </pre>
 </div>
 </div>
@@ -527,7 +538,7 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #859900;">def</span> <span style="color: #b58900;">foo</span>():
+<pre class="src src-python">def foo():
     some code...
 </pre>
 </div>
@@ -544,7 +555,7 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #859900;">def</span> <span style="color: #b58900;">displayWord</span>():
+<pre class="src src-python">def displayWord():
 </pre>
 </div>
 <ul class="org-ul">
@@ -555,8 +566,8 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #859900;">def</span> <span style="color: #b58900;">displayWord</span>():
-    <span style="color: #859900;">print</span>(<span style="color: #2aa198;">''</span>)
+<pre class="src src-python">def displayWord():
+    print('')
 </pre>
 </div>
 </div>
@@ -599,7 +610,7 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">word</span> = <span style="color: #2aa198;">'hello'</span>
+<pre class="src src-python">word = 'hello'
 </pre>
 </div>
 <ul class="org-ul">
@@ -619,7 +630,7 @@ for the JavaScript code in this tag.
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python">alphalist.remove(<span style="color: #2aa198;">'l'</span>)
+<pre class="src src-python">alphalist.remove('l')
 displayWord()
 </pre>
 </div>
@@ -640,8 +651,8 @@ displayWord()
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #859900;">def</span> <span style="color: #b58900;">displayStage</span>():
-    <span style="color: #859900;">print</span>(stages[stageindex])
+<pre class="src src-python">def displayStage():
+    print(stages[stageindex])
 </pre>
 </div>
 </div>
@@ -661,14 +672,14 @@ displayWord()
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">foo</span> = 1
+<pre class="src src-python">foo = 1
 
-<span style="color: #859900;">def</span> <span style="color: #b58900;">myfunc</span>():
-    <span style="color: #6c71c4;">bar</span> = 2
-    <span style="color: #859900;">print</span>(foo)
-    <span style="color: #859900;">print</span>(bar)
-    <span style="color: #6c71c4;">bar</span> +=1
-    <span style="color: #6c71c4;">foo</span> +=1
+def myfunc():
+    bar = 2
+    print(foo)
+    print(bar)
+    bar +=1
+    foo +=1
 </pre>
 </div>
 <ul class="org-ul">
@@ -679,11 +690,11 @@ displayWord()
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">foo</span> = <span style="color: #2aa198;">'I am foo'</span>
+<pre class="src src-python">foo = 'I am foo'
 
-<span style="color: #859900;">def</span> <span style="color: #b58900;">bar</span>():
-    <span style="color: #6c71c4;">baz</span> = <span style="color: #2aa198;">'I am baz'</span>
-    <span style="color: #859900;">print</span>(baz)
+def bar():
+    baz = 'I am baz'
+    print(baz)
 </pre>
 </div>
 <ul class="org-ul">
@@ -692,7 +703,7 @@ displayWord()
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #859900;">print</span>(foo)
+<pre class="src src-python">print(foo)
 bar()
 </pre>
 </div>
@@ -704,12 +715,12 @@ bar()
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">foo</span> = <span style="color: #2aa198;">'I am foo'</span>
+<pre class="src src-python">foo = 'I am foo'
 
-<span style="color: #859900;">def</span> <span style="color: #b58900;">bar</span>():
-    <span style="color: #6c71c4;">baz</span> = <span style="color: #2aa198;">'I am baz'</span>
-    <span style="color: #859900;">print</span>(foo)
-    <span style="color: #859900;">print</span>(baz)
+def bar():
+    baz = 'I am baz'
+    print(foo)
+    print(baz)
 </pre>
 </div>
 <ul class="org-ul">
@@ -731,13 +742,13 @@ bar()
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">foo</span> = <span style="color: #2aa198;">'I am foo'</span>
+<pre class="src src-python">foo = 'I am foo'
 
-<span style="color: #859900;">def</span> <span style="color: #b58900;">bar</span>():
-    <span style="color: #6c71c4;">baz</span> = <span style="color: #2aa198;">'I am baz'</span>
-    <span style="color: #6c71c4;">baz</span> += <span style="color: #2aa198;">', nice to meet you'</span>
-    <span style="color: #859900;">print</span>(foo)
-    <span style="color: #859900;">print</span>(baz)
+def bar():
+    baz = 'I am baz'
+    baz += ', nice to meet you'
+    print(foo)
+    print(baz)
 </pre>
 </div>
 <ul class="org-ul">
@@ -748,14 +759,14 @@ bar()
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">foo</span> = <span style="color: #2aa198;">'I am foo'</span>
+<pre class="src src-python">foo = 'I am foo'
 
-<span style="color: #859900;">def</span> <span style="color: #b58900;">bar</span>():
-    <span style="color: #6c71c4;">baz</span> = <span style="color: #2aa198;">'I am baz'</span>
-    <span style="color: #6c71c4;">baz</span> += <span style="color: #2aa198;">', nice to meet you'</span>
-    <span style="color: #6c71c4;">foo</span> += <span style="color: #2aa198;">', nice to meet you'</span>
-    <span style="color: #859900;">print</span>(foo)
-    <span style="color: #859900;">print</span>(baz)
+def bar():
+    baz = 'I am baz'
+    baz += ', nice to meet you'
+    foo += ', nice to meet you'
+    print(foo)
+    print(baz)
 </pre>
 </div>
 <ul class="org-ul">
@@ -772,15 +783,15 @@ bar()
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #6c71c4;">foo</span> = <span style="color: #2aa198;">'I am foo'</span>
+<pre class="src src-python">foo = 'I am foo'
 
-<span style="color: #859900;">def</span> <span style="color: #b58900;">bar</span>():
-    <span style="color: #859900;">global</span> foo
-    <span style="color: #6c71c4;">baz</span> = <span style="color: #2aa198;">'I am baz'</span>
-    <span style="color: #6c71c4;">baz</span> += <span style="color: #2aa198;">', nice to meet you'</span>
-    <span style="color: #6c71c4;">foo</span> += <span style="color: #2aa198;">', nice to meet you'</span>
-    <span style="color: #859900;">print</span>(foo)
-    <span style="color: #859900;">print</span>(baz)
+def bar():
+    global foo
+    baz = 'I am baz'
+    baz += ', nice to meet you'
+    foo += ', nice to meet you'
+    print(foo)
+    print(baz)
 </pre>
 </div>
 <ul class="org-ul">
@@ -816,7 +827,7 @@ bar()
 </p>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #859900;">def</span> <span style="color: #b58900;">Guess</span>():
+<pre class="src src-python">def Guess():
 </pre>
 </div>
 <ul class="org-ul">
@@ -832,7 +843,7 @@ bar()
 </li>
 <li>Otherwise, if the <code>guess</code> is <code>not in</code> the <code>word</code>, then increase <code>stageindex</code> by one and remove the <code>guess</code> from the alphalist.
 </li>
-<li>Otherwise, remove the <code>guess</code> from the <code>alphalist</code> and increase the <code>correctGuesses</code> by 1.
+<li>Otherwise, remove the <code>guess</code> from the <code>alphalist</code> and <code>for</code> each letter in the word, if the letter is equal to the guess, increase <code>correctLetters</code> by 1.
 </li>
 </ol>
 </li>
@@ -846,6 +857,10 @@ bar()
 <pre class="src src-python">myList.remove(element)
 </pre>
 </div>
+<ul class="org-ul">
+<li>Once you have finished the Gold badge tasks Part I&amp;II, upload your work and take this <a href="https://www.bournetolearn.com/quizzes/y8-textGames/Lesson_4/Gold/index.php">self-assessment quiz</a>.
+</li>
+</ul>
 </div>
 </div>
 <div id="outline-container-sec-1-21" class="outline-3 learn">
@@ -860,7 +875,7 @@ bar()
 </li>
 <li>The basic concept will be:
 <ol class="org-ol">
-<li>If the length of the word being guessed is equal to the value of <code>correctGuesses</code> then we can print out the current stage, and a message that the player has won, and finally change the <code>gameOn</code> variable to False.
+<li>If the length of the word being guessed is equal to the value of <code>correctLetters</code> then we can print out the current stage, and a message that the player has won, and finally change the <code>gameOn</code> variable to False.
 </li>
 <li>If the <code>stageIndex</code> is equal to 8 (or whatever the final stage you have_, then we should print out the current stage, send a message that the player has lost, and then set <code>gameOn</code> to false.
 </li>
@@ -875,6 +890,8 @@ bar()
 <ul class="org-ul">
 <li>For your final badge, try and write a function called <code>checkEnd():</code> that checks if the game has ended or not.
 </li>
+<li>When you have done and tested your function worked, upload and take this <a href="https://www.bournetolearn.com/quizzes/y8-textGames/Lesson_4/Platinum/index.php">self-assessment quiz</a>.
+</li>
 </ul>
 </div>
 </div>
@@ -887,7 +904,7 @@ bar()
 </ul>
 <div class="org-src-container">
 
-<pre class="src src-python"><span style="color: #859900;">while</span> gameOn == <span style="color: #268bd2;">True</span>:
+<pre class="src src-python">while gameOn == True:
     displayWord()
     displayStage()
     Guess()
