@@ -100,17 +100,18 @@
 :HTML_CONTAINER_CLASS: learn
 :END:
 - In the early days of computers, graphics were a rare thing.
-- Most users interacted with their computers using a terminal, which was only capable of rendering text.
-- Because of this, some of the earliest games ever made were purely text-based games, that only used ASCII characters.
+- Most users interacted with their computers using a terminal, which was only capable of rendering/displaying text.
+- Because of this, some of the earliest games ever made were purely text-based games, that is all graphics were made of only ASCII characters. If you don't know what ASCII characters are, look at this link [[https://en.wikipedia.org/wiki/ASCII#ASCII_printable_code_chart][ASCII LIST]]
 [[./img/rogue80.jpg]]
-- To this day, many programmers still like to create text-based games. This is especially useful when trying out a new language, as it lets the programmer play around with the logic of a programming language, without having to worry about the complicated world of rendering graphics.
+- To this day, many programmers still like to create text-based games. This is especially useful when trying out a new language, as it lets the programmer play around with solving problems using the programming language, without having to worry about the complicated world of rendering graphics.
+- Have a go at playing this famous puzzle, and fantasy game [[http://textadventures.co.uk/games/view/5zyoqrsugeopel3ffhz_vq/zork][Zork]].
 ** Badge It - Silver
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
 - Imagine you were tasked with creating a computer game, but you could only display ASCII characters on the screen and only take ASCII characters as input.
 - Look at this link [[https://en.wikipedia.org/wiki/ASCII#ASCII_printable_code_chart][ASCII LIST]]
-- Create a list of three types of games that you could create and a short description for each one. By the end of this module, you might even be capable of creating one.
+- Create a list of three types of games that you could create by ONLY using those ASCII characters as either graphics or user inputs. Write a short description for each one of your game. (hint: a classic one will be a maze game using WASD to control the player). By the end of this module, you might even be capable of creating one.
 ** Test It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: test
@@ -128,22 +129,24 @@
 :END:
 - Now open up the file in IDLE (or another text editor)
 - Have a go at changing the layout of the caves in the first string that was declared. Then play the game.
-** Extension activity 1  
+** Extension activity 
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
 - Have a read through the code of the game - you don't have to understand it all.
 - Try and change the HitPoints to make the game easier/harder
-- See if you can add an additional monster to the game
+- Add an additional monster to the game.
 - Take a screenshot of the functions you changed. Upload to your screenshot to the week1 Gold, then finish the self-assessment below.
-** Badge It - Gold
+** Badge It - Gold & Platinum
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
 
 - After you have done the above extension tasks, take this [[https://www.bournetolearn.com/quizzes/y8-textGames/Lesson_1/Gold/index.php][self assessment quiz]]. Please don't forget to upload the screenshot so your teacher can verify that you actaully have done the tasks.
-** Extension activity 2
-:PROPERTIES:
+
+#+BEGIN_COMMENT
+  ** Extension activity 2
+  :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
 - Can you make any other changes to the game?
@@ -152,9 +155,10 @@
 - Use your imagination and have a go - if you break the code too much, just download another copy
 - Take screenshots of any functions you changed and use comments (starting your explanation with a # in the code) to explain what you have done. Upload to your screenshots to the week1 platinum, then finish the self-assessment below.
   
-** Badge It - Platinum
+  ** Badge It - Platinum
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
 :END:
 
 - After you have done the above extension tasks, take this [[https://www.bournetolearn.com/quizzes/y8-textGames/Lesson_1/Platinum/index.php][self assessment quiz]]. Please don't forget to upload the screenshots so your teacher can verify that you actaully have done the tasks.
+#+END_COMMENT
