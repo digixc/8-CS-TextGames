@@ -104,7 +104,7 @@
 - Because of this, some of the earliest games ever made were purely text-based games, that is all graphics were made of only ASCII characters. If you don't know what ASCII characters are, look at this link [[https://en.wikipedia.org/wiki/ASCII#ASCII_printable_code_chart][ASCII LIST]]
 [[./img/rogue80.jpg]]
 - To this day, many programmers still like to create text-based games. This is especially useful when trying out a new language, as it lets the programmer play around with solving problems using the programming language, without having to worry about the complicated world of rendering graphics.
-- Have a go at playing this famous puzzle, and fantasy game [[http://textadventures.co.uk/games/view/5zyoqrsugeopel3ffhz_vq/zork][Zork]].
+- Have a go at playing this famous puzzle, and fantasy game [[http://schoolzork.weebly.com/zork.html][Zork]].
 ** Badge It - Silver
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
