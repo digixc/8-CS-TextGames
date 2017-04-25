@@ -22,8 +22,7 @@
       <li><a href="4_Lesson.html">Week4</a></li>
       <li><a href="5_Lesson.html">Week5</a></li>
       <li><a href="6_Lesson.html">Week6</a></li>
-      <li><a href="assessment.html">Assessment</a></li>
-
+      <li><a href="homework.html">Homework</a></li>
     </ul>
   </div>
 #+END_HTML
@@ -104,7 +103,7 @@
 - Because of this, some of the earliest games ever made were purely text-based games, that is all graphics were made of only ASCII characters. If you don't know what ASCII characters are, look at this link [[https://en.wikipedia.org/wiki/ASCII#ASCII_printable_code_chart][ASCII LIST]]
 [[./img/rogue80.jpg]]
 - To this day, many programmers still like to create text-based games. This is especially useful when trying out a new language, as it lets the programmer play around with solving problems using the programming language, without having to worry about the complicated world of rendering graphics.
-- Have a go at playing this famous puzzle, and fantasy game [[http://schoolzork.weebly.com/zork.html][Zork]].
+- Have a go at playing this famous puzzle, and fantasy game [[http://textadventures.co.uk/games/play/5zyoqrsugeopel3ffhz_vq][Zork]].
 ** Badge It - Silver
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: badge
