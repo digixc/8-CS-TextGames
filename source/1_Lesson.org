@@ -110,7 +110,16 @@
 :END:
 - Imagine you were tasked with creating a computer game, but you could only display ASCII characters on the screen and only take ASCII characters as input.
 - Look at this link [[https://en.wikipedia.org/wiki/ASCII#ASCII_printable_code_chart][ASCII LIST]]
-- Create a list of three types of games that you could create by ONLY using those ASCII characters as either graphics or user inputs. Write a short description for each one of your game. (hint: a classic one will be a maze game using WASD to control the player). By the end of this module, you might even be capable of creating one.
+- Create a list of three types of games that you could create by ONLY using those ASCII characters as either graphics or user inputs. Write a short description for each one of your game.See the example work below for guidance. By the end of this module, you might even be capable of creating one.
+#+BEGIN_SRC 
+My game 1:
+   A player (letter P) will be moved around by the user using W.S.A.D keys
+   inside a walled area made of letter T.  
+   Inside the walled area, there will be 5 chickens (letter X,Y,Z,W,K)
+   moving randomly. 
+   The goal is for the player to catch all the chickens within a set 
+   amount of time. Difficulty levels can be set by the time.
+#+END_SRC
 ** Test It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: test
