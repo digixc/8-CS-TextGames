@@ -107,9 +107,9 @@
      1. ask user for =input=
      2. =output= some information
   2. Explain how this line of code works:
-#+BEGIN_SRC Python
+   #+BEGIN_SRC Python
    random.randrange(0,10)
-#+END_SRC
+   #+END_SRC
   3. The follow code is supposed to output numbers from 0 to 9. But it has an error in it. Please identify the error.
 #+BEGIN_SRC Python
  while x < 10:
