@@ -125,11 +125,48 @@ for the JavaScript code in this tag.
 
 
 <div id="outline-container-sec-1-2" class="outline-3 learn">
-<h3 id="sec-1-2">Homework 2 - coming soon</h3>
+<h3 id="sec-1-2">Homework 2 - The range command</h3>
 <div class="outline-text-3" id="text-1-2">
 
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table style="text-align:left;"><tr><td><pre style="margin: 0; line-height: 125%">1
+2</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">for</span> I <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #0000DD; font-weight: bold">5</span>):
+    <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;Welcome to the range&quot;</span>)
+</pre></td></tr></table></div>
+
 <ul class="org-ul">
-<li>coming soon
+<li>The above code is a for loop - that is, the command indented underneath the <code>for i in range(5)</code> will be repeated. In this case, the <code>Welcome to the range</code> will be printed 5 times. Why?
+</li>
+<li>It is becasue the number of times a loop repeats is specified by the number given in the range(5).
+</li>
+<li>Range command works like this:
+<ol class="org-ol">
+<li><code>range(upToNumber)</code> - it produce a sequence of numbers from 0 up to BUT NOT equal to the upToNumber. For example, range(5) will produce: <code>0,1,2,3,4</code>, therefore, there are 5 numbers, for each number the loop going through, it prints out "Welcome to the range".
+</li>
+<li><code>range(startNumber, upToNumber)</code> - it produces a sequence of numbers from startNumber to BUT NOT equal to the upToNumber. For example, range(3,8) will produce: <code>3,4,5,6,7</code>
+</li>
+<li><code>range(startNumber, upToNumber, increaseBy)</code>- it produces a sequence of numbers from startNumber to BUT NOT equal to the upToNumber, each time the next number increase by the number specified by <code>increaseBy</code>. For example, range(2,10,2) will produce: <code>2,4,6,8</code>. 
+</li>
+</ol>
+</li>
+<li>Your homework:
+<ol class="org-ol">
+<li>What numbers are produced in this loop:
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table  style="text-align:left;"><tr><td><pre style="margin: 0; line-height: 125%">1
+2</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #0000DD; font-weight: bold">10</span>, <span style="color: #0000DD; font-weight: bold">20</span>, <span style="color: #0000DD; font-weight: bold">2</span>):
+    <span style="color: #008800; font-weight: bold">print</span>(i)
+</pre></td></tr></table></div>
+</li>
+
+<li>What numbers are produced in this loop:
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table style="text-align:left;"><tr><td><pre style="margin: 0; line-height: 125%">1
+2</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #0000DD; font-weight: bold">100</span>, <span style="color: #0000DD; font-weight: bold">40</span>, <span style="color: #333333">-</span><span style="color: #0000DD; font-weight: bold">5</span>):
+    <span style="color: #008800; font-weight: bold">print</span>(i)
+</pre></td></tr></table></div>
+</li>
+
+<li>write a for loop that will print out all positive whole numbers (integers) up to 100 that are divisible by 5.
+</li>
+</ol>
 </li>
 </ul>
 </div>

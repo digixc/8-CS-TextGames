@@ -119,12 +119,46 @@
 #+END_SRC
      
 
-** Homework 2 - coming soon
+** Homework 2 - The range command
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
 :END:
 
-- coming soon
+#+BEGIN_HTML
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table style="text-align:left;"><tr><td><pre style="margin: 0; line-height: 125%">1
+2</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">for</span> I <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #0000DD; font-weight: bold">5</span>):
+    <span style="color: #008800; font-weight: bold">print</span>(<span style="background-color: #fff0f0">&quot;Welcome to the range&quot;</span>)
+</pre></td></tr></table></div>
+
+#+END_HTML
+
+- The above code is a for loop - that is, the command indented underneath the =for i in range(5)= will be repeated. In this case, the =Welcome to the range= will be printed 5 times. Why?
+- It is becasue the number of times a loop repeats is specified by the number given in the range(5).
+- Range command works like this:
+  1. =range(upToNumber)= - it produce a sequence of numbers from 0 up to BUT NOT equal to the upToNumber. For example, range(5) will produce: =0,1,2,3,4=, therefore, there are 5 numbers, for each number the loop going through, it prints out "Welcome to the range".
+  2. =range(startNumber, upToNumber)= - it produces a sequence of numbers from startNumber to BUT NOT equal to the upToNumber. For example, range(3,8) will produce: =3,4,5,6,7=
+  3. =range(startNumber, upToNumber, increaseBy)=- it produces a sequence of numbers from startNumber to BUT NOT equal to the upToNumber, each time the next number increase by the number specified by =increaseBy=. For example, range(2,10,2) will produce: =2,4,6,8=. 
+- Your homework:
+ 1. What numbers are produced in this loop:
+   #+BEGIN_HTML
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table  style="text-align:left;"><tr><td><pre style="margin: 0; line-height: 125%">1
+2</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #0000DD; font-weight: bold">10</span>, <span style="color: #0000DD; font-weight: bold">20</span>, <span style="color: #0000DD; font-weight: bold">2</span>):
+    <span style="color: #008800; font-weight: bold">print</span>(i)
+</pre></td></tr></table></div>
+
+
+   #+END_HTML
+
+ 2. What numbers are produced in this loop:
+   #+BEGIN_HTML
+<!-- HTML generated using hilite.me --><div style="background: #ffffff; overflow:auto;width:auto;border:solid gray;border-width:.1em .1em .1em .8em;padding:.2em .6em;"><table style="text-align:left;"><tr><td><pre style="margin: 0; line-height: 125%">1
+2</pre></td><td><pre style="margin: 0; line-height: 125%"><span style="color: #008800; font-weight: bold">for</span> i <span style="color: #000000; font-weight: bold">in</span> <span style="color: #007020">range</span>(<span style="color: #0000DD; font-weight: bold">100</span>, <span style="color: #0000DD; font-weight: bold">40</span>, <span style="color: #333333">-</span><span style="color: #0000DD; font-weight: bold">5</span>):
+    <span style="color: #008800; font-weight: bold">print</span>(i)
+</pre></td></tr></table></div>
+
+   #+END_HTML
+
+ 3. write a for loop that will print out all positive whole numbers (integers) up to 100 that are divisible by 5.
 	 
 ** Homework 3 - Literacy Task
 :PROPERTIES:
