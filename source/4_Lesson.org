@@ -255,7 +255,7 @@ displayStage(numOfAttempts)
   - a player can input a letter.
   - you have added the displayStage function to your code.
   - Tested your code and you should see the correct stage is printed for failed and successdful guesses.
-  - this[[https://www.bournetolearn.com/quizzes/y8-textGames/Lesson_4/Silver/index.php][ self-assessment quiz]]when you have done running each of the code.
+  - Upload your code to www.bournetocode.com.
 
 ** Code It
 :PROPERTIES:
@@ -338,7 +338,7 @@ def displayWord():
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: gold
 :END:
-- Once you have finished the above code and tested it works, upload your work and take this [[https://www.bournetolearn.com/quizzes/y8-textGames/Lesson_4/Gold/index.php][self-assessment quiz]].
+- Once you have finished the above code and tested it works, upload your work and upload your code to www.bournetocode.com
 ** Learn It
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: learn
@@ -359,5 +359,5 @@ def displayWord():
   1. If the length of the word being guessed is equal to the value of =correctLetters= then we can print out the current stage, and a message that the player has won, and finally change the =gameOn= variable to False.
   2. If the =numOfAttempts= is equal to 8 (or whatever the final stage you have, then we should print out the current stage, send a message that the player has lost, and then set =gameOn= to false.
 - Try to improve your game so the above logic will be implemented
-- When you have done and tested your function worked, upload and take this [[https://www.bournetolearn.com/quizzes/y8-textGames/Lesson_4/Platinum/index.php][self-assessment quiz]].
+- When you have done and tested your function worked, upload your code to www.bournetocode.com.
 
