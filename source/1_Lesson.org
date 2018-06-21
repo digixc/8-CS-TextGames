@@ -124,7 +124,7 @@ My game 1:
 :PROPERTIES:
 :HTML_CONTAINER_CLASS: test
 :END:
-- [[file:doc/rogueClone.py][Download this file]] to your home folder.
+- Right click on this link [[file:doc/rogueClone.py][Download this file]], and choose to save to your home folder.
 - Double click it to open it up.
 - You might need to resize the terminal on Windows - right click the top bar and choose properties
 [[file:img/screen1.png]]
