@@ -103,9 +103,10 @@
 - During week 1 you have played a text based game and had a look at the Python code.
 - During week 2, you have learned and practiced using while loops. 
 - For this assignment
-  1. look at [[./doc/rogueClone.py][the Python game file in week 1]] and identify the lines of code that,:
-     1. ask user for =input=
-     2. =output= some information
+  1. Write lines of code for the following:
+     1. ask user to input a number and store the input in a variable
+     2. convert the input number to an integer
+     3. if the number is greater or equal to 10, output "It's double digit number at least", else output "It's a small number"
   2. Explain how this line of code works:
    #+BEGIN_SRC Python
    random.randrange(0,10)
@@ -115,7 +116,7 @@
  while x < 10:
          x = 0
          print (x)
-         x++
+         x += 1
 #+END_SRC
      
 
